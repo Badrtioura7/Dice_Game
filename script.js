@@ -32,4 +32,22 @@ btnRoll.addEventListener('click', function () {
     player0El.classList.toggle('player--active');
     player1El.classList.toggle('player--active');
   }
-});
+})
+btnHold.addEventListener('click', function(){
+
+scores[activePlayer]+=currentScore;
+document.getElementById(`score--${activePlayer}`).textContent= scores[activePlayer];
+if(scores[activePlayer]>=20){
+  document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+  document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+  currentScore = 0;
+  
+}
+player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+
+
+
+}
+
+)
